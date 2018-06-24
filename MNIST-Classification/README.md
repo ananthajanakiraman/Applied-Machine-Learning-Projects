@@ -19,7 +19,7 @@ Regardless of the format of the dataset, it consists of 28 x 28 images. These we
 
 Here are some pictures, which may help
 
-<img src="MNIST-Classification/bouding_v2.png">
+<img src="/MNIST-Classification/bouding_v2.png">
 
 **Homework1 Problem2 – Part A**
 
