@@ -11,5 +11,26 @@ Based on the implementation above I produced the following
 + Plot of the accuracy every 30 steps, for each value of the regularization constant.
 + plot of the magnitude of the coefficient vector every 30 steps, for each value of the regularization constant.
 + Estimate of the best value of the regularization constant, together with a brief description of why you believe that is a good value.
-+ Your estimate of the accuracy of the best classifier on the 10% test dataset data
++ Estimate of the accuracy of the best classifier on the 10% test dataset data
 
+**Plot of accuracy every 30 steps for each value of regularization constant:**
+
+Chosen regularization constants: 1, 1e-1, 1e-2, 1e-3, 1e-4
+
+<img src="Epoch_vs_Accuracy_6.png">
+
+**Plot of the magnitude of coefficient vector every 30 steps for each value of regularization constant:**
+
+Chosen regularization constants: 1, 1e-1, 1e-2, 1e-3, 1e-4
+
+<img src="Epoch_vs_Magnitude_6.png">
+
+**Best value for regularization constant:**
+
+I did 10 different runs on the 10% validation set, the average accuracy on the validation set for regularization constant values of : 1, 1e-1, 1e-2, 1e-3, 1e-4 were 0.7648372, 0.77584477, 0.78666121, 0.79256092 & 0.79607617. Based on the average values above, my estimate on the best value of regularization constant is 1e-4. 
+
+A low value on the regularization parameter was increasing the width of the margin of the hyperplane. SVM tries to find a hyperplane with the largest minimum margin and one that correctly separates the classes as much as possible. It is also understood that both together are not achievable and as evident from my multiple tests, the number of misclassified examples keeps increasing as the regularization value gets smaller and the accuracy decreases. Therefore, I had to choose an optimal regularization value that is neither too large nor too small and can offer reasonable accuracy combined with largest minimum margin, that value seems to be 1e-4 (based on the regularization values I chose) in several cases for the chosen dataset. The prediction accuracy on the test set is high for the regularization values of 1e-3 in some cases and 1e-4 for several cases.  
+
+**Best accuracy on 10% test set:**
+
+The best accuracy value obtained on 10% of the test set is 0.8202293
