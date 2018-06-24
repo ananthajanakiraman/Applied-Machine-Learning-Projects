@@ -16,15 +16,11 @@ Based on the implementation above I produced the following
 **Plot of accuracy every 30 steps for each value of regularization constant:**
 
 Chosen regularization constants: 1, 1e-1, 1e-2, 1e-3, 1e-4
-
 <img src="Epoch_vs_Accuracy_6.png">
-
 **Plot of the magnitude of coefficient vector every 30 steps for each value of regularization constant:**
 
 Chosen regularization constants: 1, 1e-1, 1e-2, 1e-3, 1e-4
-
 <img src="Epoch_vs_Magnitude_6.png">
-
 **Best value for regularization constant:**
 
 I did 10 different runs on the 10% validation set, the average accuracy on the validation set for regularization constant values of : 1, 1e-1, 1e-2, 1e-3, 1e-4 were 0.7648372, 0.77584477, 0.78666121, 0.79256092 & 0.79607617. Based on the average values above, my estimate on the best value of regularization constant is 1e-4. 
