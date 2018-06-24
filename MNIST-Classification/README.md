@@ -70,8 +70,7 @@ Stretched bounding box:
 
           Reference
 
-     Prediction    0    1    2    3    4    5    6    7    8    9
-
+      Pred    0    1    2    3    4    5    6    7    8    9
          0  924    0  183  118   77  132   70   24   23   22
          1    0 1078   31   41   13   31   25   17   81   17
          2    3    0  133    2    4    1    0    1    2    3
@@ -95,7 +94,8 @@ Overall Statistics
 **Confusion Matrix and Statistics - Naive Bayes Bernoulli 20 x 20 bounding**
 
           Reference
-Prediction    0    1    2    3    4    5    6    7    8    9
+          
+      Pred    0    1    2    3    4    5    6    7    8    9
          0  902    0   22    7    5   30   28    1   17   12
          1    0 1073    9   19    5   11   18   25   15   16
          2    3   10  835   41    4    7   13   21   10    6
@@ -120,7 +120,7 @@ Overall Statistics
 
           Reference
 
-Prediction   0   1   2   3   4   5   6   7   8   9
+      Pred   0   1   2   3   4   5   6   7   8   9
          0 938   3  18   6   3  17  14   0  10   5
          1   1 922  18   9  24  12  12  51  44  15
          2   3  43 826  24   5   5   8  39  30   7
@@ -145,7 +145,7 @@ Overall Statistics
 
           Reference
 
-Prediction   0   1   2   3   4   5   6   7   8   9
+      Pred   0   1   2   3   4   5   6   7   8   9
          0 953   1  40  10   3  26  24   3  13   5
          1  11 791  54  28  79  59  52 148  69  29
          2   0  39 784  16   2   3   2  20   5   4
@@ -170,7 +170,7 @@ Overall Statistics
 
           Reference
 
-Prediction    0    1    2    3    4    5    6    7    8    9
+      Pred    0    1    2    3    4    5    6    7    8    9
          0  862    0   94   40   22   69   16    2   13    8
          1    0 1081   24   33    2   25   13   14   67    7
          2    1    1  212    4    2    1    2    0    4    1
@@ -195,7 +195,7 @@ Overall Statistics
 
           Reference
           
-Prediction    0    1    2    3    4    5    6    7    8    9
+      Pred    0    1    2    3    4    5    6    7    8    9
          0  887    0   19    5    2   23   18    1   16    9
          1    0 1085    8   15    6   12   18   24   23   13
          2    4   10  852   34    4    7   15   14   13    5
