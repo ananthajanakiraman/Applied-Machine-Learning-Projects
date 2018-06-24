@@ -1,0 +1,17 @@
+Confusion Matrix,brush_teeth,climb_stairs,comb_hair,descend_stairs,drink_glass,eat_meat,eat_soup,getup_bed,liedown_bed,pour_water,sitdown_chair,standup_chair,use_telephone,walk,Error,Rate
+brush_teeth,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 / 3
+climb_stairs,0,14,0,0,0,0,0,0,0,0,0,0,0,6,0.3,6 / 20
+comb_hair,0,0,5,0,1,0,0,0,0,0,0,0,0,0,0.166666667,1 / 6
+descend_stairs,0,1,0,6,0,0,0,0,0,0,1,0,0,0,0.25,2 / 8
+drink_glass,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0 / 20
+eat_meat,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0 / 1
+eat_soup,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0 / 1
+getup_bed,0,1,0,0,0,0,0,8,0,3,2,6,0,0,0.6,12 / 20
+liedown_bed,0,0,1,0,0,0,0,2,0,2,1,0,0,0,1,6 / 6
+pour_water,0,0,0,0,0,0,0,0,0,20,0,0,0,0,0,0 / 20
+sitdown_chair,0,1,0,0,1,0,0,2,2,1,11,2,0,0,0.45,9 / 20
+standup_chair,0,0,0,0,0,0,0,6,0,2,1,11,0,0,0.45,9 / 20
+use_telephone,0,0,0,0,2,0,0,0,0,0,0,0,1,0,0.666666667,1 / 3
+walk,0,0,0,0,0,0,0,1,0,0,0,0,0,19,0.05,1 / 20
+Totals,3,17,6,6,24,1,1,19,2,28,16,19,1,25,0.285714286,48 / 168
+,,,,,,,,,,,,,,Accuracy,0.7142857,

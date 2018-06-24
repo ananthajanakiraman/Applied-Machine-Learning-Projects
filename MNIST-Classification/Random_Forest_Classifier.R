@@ -1,0 +1,43 @@
+##############################################################################################
+#Used the image dataframes created from the earlier run for Untouched and Stretched          #
+######################################################################################################
+#Used the same code to run Untouched and Stretched but just replaced the name of the image dataframe #
+######################################################################################################
+
+features <- colnames(training_rf)[!(colnames(training_rf) %in% "y")]
+h2o.init(nthreads = -1, max_mem_size = '2g', ip = "127.0.0.1", port = 50001)
+trainhex <- as.h2o(training_rf)
+rfhex1 <- h2o.randomForest(x=features,y="y",ntrees = 10,max_depth = 4,training_frame=trainhex)
+rfhex2 <- h2o.randomForest(x=features,y="y",ntrees = 20,max_depth = 4,training_frame=trainhex)
+rfhex3 <- h2o.randomForest(x=features,y="y",ntrees = 30,max_depth = 4,training_frame=trainhex)
+rfhex4 <- h2o.randomForest(x=features,y="y",ntrees = 10,max_depth = 8,training_frame=trainhex)
+rfhex5 <- h2o.randomForest(x=features,y="y",ntrees = 20,max_depth = 8,training_frame=trainhex)
+rfhex6 <- h2o.randomForest(x=features,y="y",ntrees = 30,max_depth = 8,training_frame=trainhex)
+rfhex7 <- h2o.randomForest(x=features,y="y",ntrees = 10,max_depth = 16,training_frame=trainhex)
+rfhex8 <- h2o.randomForest(x=features,y="y",ntrees = 20,max_depth = 16,training_frame=trainhex)
+rfhex9 <- h2o.randomForest(x=features,y="y",ntrees = 30,max_depth = 16,training_frame=trainhex)
+#summary(rfhex)
+testhex<-as.h2o(testing_rf)
+predictions1<-as.data.frame(h2o.predict(rfhex1,testhex))
+predictions2<-as.data.frame(h2o.predict(rfhex2,testhex))
+predictions3<-as.data.frame(h2o.predict(rfhex3,testhex))
+predictions4<-as.data.frame(h2o.predict(rfhex4,testhex))
+predictions5<-as.data.frame(h2o.predict(rfhex5,testhex))
+predictions6<-as.data.frame(h2o.predict(rfhex6,testhex))
+predictions7<-as.data.frame(h2o.predict(rfhex7,testhex))
+predictions8<-as.data.frame(h2o.predict(rfhex8,testhex))
+predictions9<-as.data.frame(h2o.predict(rfhex9,testhex))
+#h2o.hit_ratio_table(rfhex)
+mean(predictions1$predict==test$y)
+mean(predictions2$predict==test$y)
+mean(predictions3$predict==test$y)
+mean(predictions4$predict==test$y)
+mean(predictions5$predict==test$y)
+mean(predictions6$predict==test$y)
+mean(predictions7$predict==test$y)
+mean(predictions8$predict==test$y)
+mean(predictions9$predict==test$y)
+h2o.shutdown(prompt = FALSE)
+#performance <- h2o.performance(model=rfhex,newdata=testhex)
+#pred <- expm1(predictions[,1])
+#h2o.accuracy(performance)
