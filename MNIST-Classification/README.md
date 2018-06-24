@@ -19,6 +19,8 @@ Regardless of the format of the dataset, it consists of 28 x 28 images. These we
 
 Here are some pictures, which may help
 
+<img src="bouding_v2.png">
+
 **Homework1 Problem2 – Part A**
 
 Based on the table below, Gaussian distribution seem to have performed better for Stretched images and Bernoulli distribution for untouched image pixels.
