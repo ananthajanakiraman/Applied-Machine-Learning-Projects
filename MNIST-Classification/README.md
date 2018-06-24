@@ -70,7 +70,7 @@ Stretched bounding box:
 
           Reference
 
-Prediction    0    1    2    3    4    5    6    7    8    9
+     Prediction    0    1    2    3    4    5    6    7    8    9
 
          0  924    0  183  118   77  132   70   24   23   22
          1    0 1078   31   41   13   31   25   17   81   17
