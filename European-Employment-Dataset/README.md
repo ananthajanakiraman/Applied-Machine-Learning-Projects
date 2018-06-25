@@ -80,3 +80,49 @@ I obtained an accuracy of 72.02% with 32 segments and 480 clusters without any s
 **Length-16 Segment and 480 Clusters – With Overlap : Accuracy – 77.97%**
 <img src="mat4.png">
 
+**Histogram Plots on Training Data**
+
+**Brush Teeth Plot**
+<img src="brush_teeth_plot">
+
+**Climb Stairs Plot**
+<img src="climb_stairs_plot">
+
+**Comb Hair Plot**
+<img src="comb_hair_plot">
+
+**Descend Stairs Plot**
+<img src="descend_stairs_plot">
+
+**Drink Glass Plot**
+<img src="drink_glass_plot">
+
+**Eat Meat Plot**
+<img src="eat_meat_plot">
+
+**Eat Soup Plot**
+<img src="eat_soup_plot">
+
+**Getup Bed Plot**
+<img src="getup_bed_plot">
+
+**Liedown Bed Plot**
+<img src="liedown_bed_plot">
+
+**Pour Water Plot**
+<img src="pour_water_plot">
+
+**Sitdown Chair Plot**
+<img src="sitdown_chair_plot">
+
+**Standup Chair Plot**
+<img src="standup_chair_plot">
+
+**Use telephone Plot**
+<img src="use_telephone_plot">
+
+**Walk Plot**
+<img src="walk_plot1">
+
+**Walk Plot**
+<img src="walk_plot2">
