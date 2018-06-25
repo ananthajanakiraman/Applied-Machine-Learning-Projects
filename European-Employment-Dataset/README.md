@@ -122,7 +122,7 @@ I obtained an accuracy of 72.02% with 32 segments and 480 clusters without any s
 <img src="use_telephone_plot.png">
 
 **Walk Plot**
-<img src="walk_plot1.png">
+<img src="walk_plot_1.png">
 
 **Walk Plot**
-<img src="walk_plot2.png">
+<img src="walk_plot_2.png">
