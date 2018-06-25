@@ -46,6 +46,6 @@ PCA serves as a dimensionality reduction method on the features of our original 
 **Variance Plot**
 <img src="princomp_variance_plot.png">
 **KMeans using PCA**
-<img src="KMeans_Plot_2.png">
+<img src="KMeans_Plot_2.png"> 
 
 
