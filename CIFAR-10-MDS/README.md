@@ -27,4 +27,13 @@ For each category, computed the mean image and the first 20 principal components
 
 <img src="Plot_Part1.png">
 
+Then I computed the distances between mean images for each pair of classes using a well known distance measure - Euclidean distance measure. I computed istances by thinking of the images as vectors and used principal coordinate analysis to make a 2D map of the means of each categories. Below is the 2D plot and computed distance matrix.
 
+**Euclidean Distance Matrix**
+<img src="dist1.png">
+
+**2D Plot using PCA**
+<img src="Plot_Part2.png">
+
+**Network Graph**
+<img src="net1.png">
