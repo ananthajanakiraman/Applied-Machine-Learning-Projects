@@ -43,6 +43,7 @@ One method to validate the number of clusters is the elbow method. The idea of t
 **Principal Component Analysis**
 
 PCA serves as a dimensionality reduction method on the features of our original dataset by projecting these features onto a lower dimension. I tried to reduce the number of columns (i.e features) in the original dataset down to 3 columns. I also used the measure of Explained Variance to motivate and inform our search on getting the right number of PCA projections. Below is the variance plot explaining the percentage variance on each of the principal component. The plot shows that the first 3 principal components explain more than 85% of variance on the data.
+
 **Variance Plot**
 <img src="princomp_variance_plot.png">
 **KMeans using PCA**
