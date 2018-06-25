@@ -83,46 +83,46 @@ I obtained an accuracy of 72.02% with 32 segments and 480 clusters without any s
 **Histogram Plots on Training Data**
 
 **Brush Teeth Plot**
-<img src="brush_teeth_plot">
+<img src="brush_teeth_plot.png">
 
 **Climb Stairs Plot**
-<img src="climb_stairs_plot">
+<img src="climb_stairs_plot.png">
 
 **Comb Hair Plot**
-<img src="comb_hair_plot">
+<img src="comb_hair_plot.png">
 
 **Descend Stairs Plot**
-<img src="descend_stairs_plot">
+<img src="descend_stairs_plot.png">
 
 **Drink Glass Plot**
-<img src="drink_glass_plot">
+<img src="drink_glass_plot.png">
 
 **Eat Meat Plot**
-<img src="eat_meat_plot">
+<img src="eat_meat_plot.png">
 
 **Eat Soup Plot**
-<img src="eat_soup_plot">
+<img src="eat_soup_plot.png">
 
 **Getup Bed Plot**
-<img src="getup_bed_plot">
+<img src="getup_bed_plot.png">
 
 **Liedown Bed Plot**
-<img src="liedown_bed_plot">
+<img src="liedown_bed_plot.png">
 
 **Pour Water Plot**
-<img src="pour_water_plot">
+<img src="pour_water_plot.png">
 
 **Sitdown Chair Plot**
-<img src="sitdown_chair_plot">
+<img src="sitdown_chair_plot.png">
 
 **Standup Chair Plot**
-<img src="standup_chair_plot">
+<img src="standup_chair_plot.png">
 
 **Use telephone Plot**
-<img src="use_telephone_plot">
+<img src="use_telephone_plot.png">
 
 **Walk Plot**
-<img src="walk_plot1">
+<img src="walk_plot1.png">
 
 **Walk Plot**
-<img src="walk_plot2">
+<img src="walk_plot2.png">
