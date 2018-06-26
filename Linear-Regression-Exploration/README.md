@@ -37,9 +37,11 @@ The residual vs fitted plots above indicate that the residuals depart from 0 sys
 **Body Mass Dataset**
 
 I tried to build a linear regression of predicting the body mass from various diameters and plotted the residual against the fitted values. Below is the plot
+
 **Residual vs Fitted values (Mass vs other measurements)**
 <img src="pic5.png">
 Then, I regressed the cube root of mass against these diameters and plotted the residual against the fitted values in both these cube root coordinates and in the original coordinates as seen below.
+
 **Residual vs Fitted values (Cubic Root of Mass vs other measurements)**
 <img src="pic6.png">
 
