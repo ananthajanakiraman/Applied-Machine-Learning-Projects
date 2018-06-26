@@ -67,4 +67,15 @@ including gender, represented as above and plotted the residual against the fitt
 
 The first two plots seem to be exhibiting a lot of funneling effect with the larger end of the funnel towards the larger fitted values and these may not be the ideal regression models, they do not exhibit a basic random pattern. Also, their r-squared values are lower than the next two regression models which makes me incline towards the regression models using log of Age vs other measurements. The residual vs fitted plots for the regression models using log of Age vs measurements including & excluding gender look similar, the funneling effect is not as bad as it was in the first two models. There seems to be some randomness in the plots and taking into consideration the r-squared values, I am inclined towards choosing the regression model using log of Age vs other measurements including gender out of the four regression models to predict the Age of Abalone.
 
+I then tried to improve the regression using a regularizer ('glmnet' function in R) and observed the optimal lambda.min value. Below are the plots of the cross-validated prediction error.
 
+**GLMNET on regression using Age vs Other measurement excluding Gender**
+<img src="pic12.png">
+**GLMNET on regression using Age vs Other measurement including Gender**
+<img src="pic13.png">
+**GLMNET on regression using log of Age vs Other measurement excluding Gender**
+<img src="pic14.png">
+**GLMNET on regression using log of Age vs Other measurement excluding Gender**
+<img src="pic15.png">
+
+The regularization seems to be offering little help in improving the regression for all the models as observed in the plots above and also based on the r-squared values. The r-squared values are either similar or in some cases even worse compared to the non-regularized versions. The lambda.min value is close to 0 in all the cases which is also an indication that regularization may not improve the regression. The next step will be employing different regularization methods and try to figure out if any of the other techniques improve the regression.
