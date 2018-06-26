@@ -19,4 +19,15 @@ In statistics, linear regression is a linear approach to modelling the relations
 In linear regression, the relationships are modeled using linear predictor functions whose unknown model parameters are estimated from the data. Such models are called linear models. Most commonly, the conditional mean of the response given the values of the explanatory variables (or predictors) is assumed to be an affine function of those values; less commonly, the conditional median or some other quantile is used. Like all forms of regression analysis, linear regression focuses on the conditional probability distribution of the response given the values of the predictors, rather than on the joint probability distribution of all of these variables, which is the domain of multivariate analysis.
 
 First, I built a linear regression of the log of the concentration against the log of time using the R function 'lm'. Below is the plot showing the data points and the regression line in log-log coordinates.
+
 <img src="pic1.png">
+
+Then, I prepared a plot showing the data points and the regression line in original coordinates.
+
+<img src="pic2.png">
+
+Then, I plotted the residual against the fitted values in log-log and in original coordinates as seen below.
+
+<img src="pic3.png">
+
+<img src="pic4.png">
