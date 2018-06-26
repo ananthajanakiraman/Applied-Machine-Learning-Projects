@@ -28,6 +28,9 @@ Then, I prepared a plot showing the data points and the regression line in origi
 
 Then, I plotted the residual against the fitted values in log-log and in original coordinates as seen below.
 
+**Log-Log plot of Residual vs Fitted values**
 <img src="pic3.png">
-
+**Original coordinates plot of Residual vs Fitted values**
 <img src="pic4.png">
+
+The residual vs fitted plots above indicate that the residuals depart from 0 systematically. The residual values increase and are larger for smaller values of x and smaller for larger values of x, they again increase for larger values of x indicating clearly that a non-linear model would better describe the relationship between the two variables. The prediction would be better if we formulated a non-linear model rather than a linear one. So, based on this observation, I believe the regression model in original coordinates with the regression curve fit to the data points would perform better of the two in predicting the concentration.
