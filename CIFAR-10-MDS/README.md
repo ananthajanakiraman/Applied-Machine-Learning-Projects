@@ -21,6 +21,11 @@ The classes are completely mutually exclusive. There is no overlap between autom
 
 **Image Similarity and Principal Coordinate Analysis**
 
+Multidimensional scaling (MDS) is a technique that creates a map displaying the relative positions of a number of
+objects, given only a table of the distances between them. The map may consist of one, two, three, or even more
+dimensions. The program calculates either the metric or the non-metric solution. The table of distances is known as
+the proximity matrix. It arises either directly from experiments or indirectly as a correlation matrix. 
+
 I cycled through the binary image files and imported the dataset into R dataframe using the readBin function. The dataset contained three columns corresponding to the r,g and b values of the individual images. I used the grid.raster function in R to reconstruct a few sample images just to confirm that the import was successful.
 
 For each category, computed the mean image and the first 20 principal components. Plotted the error resulting from representing the images of each category using the first 20 principal components against the category. Below is the plot -
