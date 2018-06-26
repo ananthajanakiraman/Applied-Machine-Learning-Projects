@@ -45,3 +45,7 @@ Then, I regressed the cube root of mass against these diameters and plotted the 
 **Residual vs Fitted values (Cubic Root of Mass vs other measurements)**
 <img src="pic6.png">
 
+**Residual vs Fitted values (Plotted using Original Coordinates)**
+<img src="pic7.png">
+
+The residual vs fitted plots look pretty much the same across different regression models. The plots using the original coordinates for mass vs residual values, cubic root of mass coordinates vs residual values and cubic root of mass transformed to original coordinates vs the residual values are almost identical, they do not exhibit any specific pattern including any fanning or funneling effect and there is basic random pattern to the residuals in all the cases and the variances on the error term appear to be equal. Also, the data points in the residual plots are displaced from the residual=0 line identically as they are from the regression line for all the models. I am inclined towards choosing the first regression model with original coordinates (first type of regression) which has a better R-Square value than the other.
