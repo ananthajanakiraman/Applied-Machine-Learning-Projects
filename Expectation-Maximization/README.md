@@ -65,7 +65,7 @@ I also tried to run image segmentation (Mixture of Normals) on the smallsunset.j
 Below are the results of the segmentation with different starting points. I have also included a table that shows the number iterations before convergence for each execution.
 
 **Table**
-<img src="tab1.png">
+<img src="tab4.png">
 
 **Execution-1**
 
