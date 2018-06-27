@@ -39,3 +39,50 @@ The key difference between these two techniques is that Lasso shrinks the less i
 Traditional methods like cross-validation, stepwise regression to handle overfitting and perform feature selection work well with a small set of features but these techniques are a great alternative when we are dealing with a large set of features.
 
 **Elasticnet regression** is a regularized regression method that linearly combines the L1 and L2 penalties of the lasso and ridge methods.
+
+**Implementation**
+
+I built a straightforward linear regression of "latitude" against features. The R-squared value observed for linear regression with latitude as independent variable is 0.2928. Below are the plots for this regression.
+
+<img src="pic1.png">
+
+<img src="pic2.png">
+
+Then, I built a straightforward linear regression of "longitude" against features. The R-squared value observed for linear regression with longitude as independent variable is 0.3646. Below are the plots for this regression.
+
+<img src="pic3.png">
+
+<img src="pic4.png">
+
+**Box Cox Transformation**
+
+I tried to improve the straightforward regression using latitude (resp. longtiude) against the features using Box Cox transformation. Below are the Box Cox Transformation plots.
+
+**Box Cox transformation plots - Latitude as independent variable**
+
+<img src="pic5.png">
+
+<img src="pic6.png">
+
+<img src="pic7.png">
+
+**Box Cox transformation plots - Longitude as independent variable**
+
+<img src="pic8.png">
+
+<img src="pic9.png">
+
+<img src="pic10.png">
+
+The Box Cox transformation did not seem to improve the regression for both latitude and longitude transformations, the best lambda value achieved for latitude was 3.6 to maximize the log likelihood of the linear model which was outside -2 to +2 range and generally when the lambda value is outside this range, boxcox transformation may not be the ideal way to improve regression. Also, the R-squared value for linear regression on latitude against the features using the box cox transformed data is 0.32725 only when the lambda value is 3.6 but did not show any improvement when the lambda value was between -2 to +2.
+
+Similarly, for longitude, the best lambda value achieved was 1.1 to maximize the log likelihood of the linear model and the value being close to 1 indicated that box cox transformation did not have any impact on improving the regression and also the R-squared value for linear regression on longitude against the features using the box cox transformed data was 0.3653 which was almost the same as R-squared value achieved through the straight forward regression.
+
+Based on the above observations, I believe box cox transformation did not improve the regression significantly and I decided to use the raw data.
+
+
+
+
+
+
+
