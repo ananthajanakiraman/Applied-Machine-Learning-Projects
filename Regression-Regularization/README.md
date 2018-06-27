@@ -78,7 +78,74 @@ The Box Cox transformation did not seem to improve the regression for both latit
 
 Similarly, for longitude, the best lambda value achieved was 1.1 to maximize the log likelihood of the linear model and the value being close to 1 indicated that box cox transformation did not have any impact on improving the regression and also the R-squared value for linear regression on longitude against the features using the box cox transformed data was 0.3653 which was almost the same as R-squared value achieved through the straight forward regression.
 
-Based on the above observations, I believe box cox transformation did not improve the regression significantly and I decided to use the raw data.
+Based on the above observations, Box cox transformation did not improve the regression significantly. So, I decided to use the raw data.
+
+**Inverse Box Cox Transform**
+
+I tried to inverse the box cox transform and fit the predictions of the linear model to original coordinates both for latitude and longitude regressions. The R-squared value observed for the Latitude regression after inversing box cox & fitting predictions of model to original coordinates was 0.2630615 and for Longitude regression was 0.3645875. There was no improvement and in fact the r-squared values were worse (significantly for latitude regression) and I was able to conclude that inversing box cox and fitting predictions of the models back to original coordinates did not improve the regression either.
+
+**Linear Regression using Regularization**
+
+**Latitude as independent variable**
+
+Using glmnet I produced a regression regularized by L2 (equivalently, a ridge regression), L1 (equivalently, a lasso regression) and Elastic net (equivalently, a regression regularized by a convex combination of L1 and L2). I estimated the regularization coefficient that produces the minimum error for these regularization types. I tried three values of alpha for the elastic net regression (alpha=0.2, alpha=0.5 and alpha=0.8).
+
+Following are the different plots obtained for these regression including the unregularized regression for latitude & longtitude.
+
+**Unregularized - latitude regression**
+<img src="pic11.png">
+
+**Unregularized - longitude regression**
+<img src="pic12.png">
+
+**L2 Regularized - latitude regression**
+<img src="pic13.png">
+
+**Coefficients vs Log Likelihood plot for latitude regression**
+<img src="pic14.png">
+
+**L2 Regularized - longitude regression**
+<img src="pic15.png">
+
+**Coefficients vs Log Likelihood plot for longitude regression**
+<img src="pic16.png">
+
+**L1 Regularized - latitude regression**
+<img src="pic17.png">
+
+**Coefficients vs Log Likelihood plot for latitude regression**
+<img src="pic18.png">
+
+**L1 Regularized - longitude regression**
+<img src="pic19.png">
+
+**Coefficients vs Log Likelihood plot for longitude regression**
+<img src="pic20.png">
+
+**Elastic net Regularized - latitude regression**
+<img src="pic21.png">
+
+**Coefficients vs Log Likelihood plot for elastic net regression**
+<img src="pic22.png">
+
+**Elastic net Regularized - longitude regression**
+<img src="pic23.png">
+
+**Coefficients vs Log Likelihood plot for longitude regression**
+<img src="pic24.png">
+
+**Table - MSE and Optimal Regularization Coefficient**
+<img src="tab1.png">
+
+**Inference from Regularization plots above**
+
+Based on the analysis conducted above and the CV errors obtained if I go by plain numbers, elasticnet seems to have a generated a low CV error compared to the other models but the difference in MSE between elasticnet and other models is not significant (less than 2%). The residual vs fitted plots for unregularized regression shows a lot of randomness and do not see any specific patterns which is good (there is slight funneling with latitude plot) and seems to have a better rsquared value compared to other models. For the purpose of the this assignment I will go by the cross validated prediction error and choose elasticnet as the better performing model although there is not a significant difference in the error value.
+
+
+
+
+
+
 
 
 
