@@ -39,4 +39,5 @@ Then, I produced a table showing, for each topic, the 10 words with the highest 
 <img src="tab1.png">
 
 **Initial Pi value vs Maximized Pi value ~ 1.0**
+
 <img src="tab3.png">
