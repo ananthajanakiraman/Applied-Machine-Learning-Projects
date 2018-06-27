@@ -20,3 +20,23 @@ Now assume that p(δ θ(n), x) is about uniform. In the mixture of normals case,
 and iterate this procedure until it converges (which it does, though I shall not prove that). The algorithm I have described is extremely general and powerful, and is known as expectation maximization or (more usually) EM. The step where
 we compute Q(θ; θ(n)) is called the E step; the step where we compute the new estimate of θ is known as the M step.
 One trick to be aware of: it is quite usual to ignore additive constants in the log-likelihood, because they have no effect. When you do the E-step, taking the expectation of a constant gets you a constant; in the M-step, the constant can’t change the outcome.
+
+**EM Topic Model**
+
+Using the NIPS dataset, I implemented the multinomial mixture of topics model. For this problem, I wrote the clustering code myself (i.e. not use a package for clustering). I clustered the dataset to 30 topics, using a simple mixture of multinomial topic model.
+
+Below is the graph I produced showing, for each topic, the probability with which the topic is selected.
+
+**Topic Model using EM (Random initialization)**
+<img src="Plot_Random_Initialization.png">
+
+**Topic Model using EM (KMeans initialization)**
+<img src="Plot_KMeans_Initialization.png">
+
+Then, I produced a table showing, for each topic, the 10 words with the highest probability for that topic.
+<img src="tab1.png">
+
+<img src="tab1.png">
+
+**Initial Pi value vs Maximized Pi value ~ 1.0**
+<img src="tab3.png">
