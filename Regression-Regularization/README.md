@@ -139,7 +139,36 @@ Following are the different plots obtained for these regression including the un
 
 **Inference from Regularization plots above**
 
-Based on the analysis conducted above and the CV errors obtained if I go by plain numbers, elasticnet seems to have a generated a low CV error compared to the other models but the difference in MSE between elasticnet and other models is not significant (less than 2%). The residual vs fitted plots for unregularized regression shows a lot of randomness and do not see any specific patterns which is good (there is slight funneling with latitude plot) and seems to have a better rsquared value compared to other models. For the purpose of the this assignment I will go by the cross validated prediction error and choose elasticnet as the better performing model although there is not a significant difference in the error value.
+Based on the analysis conducted above and the CV errors obtained if I go by plain numbers, elasticnet seemed to have  generated a low CV error compared to the other models but the difference in MSE between elasticnet and other models was not significant (less than 2%). The residual vs fitted plots for unregularized regression shows a lot of randomness and did not see any specific patterns which was good (there is slight funneling with latitude plot) and seems to have a better rsquared value compared to other models. For the purpose of the this exploration I will go by the cross validated prediction error and choose elasticnet as the better performing model although there was not a significant difference in the error value.
+
+**Logistic Regression**
+
+In regression analysis, logistic regression or logit regression is estimating the parameters of a logistic model. More formally, a logistic model is one where the log-odds of the probability of an event is a linear combination of independent or predictor variables. The two possible dependent variable values are often labelled as "0" and "1", which represent outcomes such as pass/fail, win/lose, alive/dead or healthy/sick. The binary logistic regression model can be generalized to more than two levels of the dependent variable: categorical outputs with more than two values are modelled by multinomial logistic regression, and if the multiple categories are ordered, by ordinal logistic regression, for example the proportional odds ordinal logistic model.
+
+On the Taiwanese Credit Card User defaults dataset, I performed logistic regression to predict whether a user defaults. I  ignored outliers, but tried the various regularization schemes discussed above. Following are the plots obtained for the different regularization schemes and the table below shows the MSE and optimal regularization coefficient for each of the regularization schemes.
+
+**Alpha=0 (Ridge)**
+<img src="pic25.png">
+
+**Alpha=1 (Lasso)**
+<img src="pic26.png">
+
+**Alpha=0.2 (Elastic net)**
+<img src="pic27.png">
+
+**Alpha=0.5 (Elastic net)**
+<img src="pic28.png">
+
+**Alpha=0.8 (Elastic net)**
+<img src="pic29.png">
+
+**Inference of Logistic Regression models**
+
+The unregularized regression seemed to have a low MSE compared to the regularized versions and I considered it the winner. I also did a stepwise a variable selection in the unregularized regression using the step function and estimated the coefficients based on the optimized model. The accuracy (or error rate) was almost the same across regularized and unregularized versions with the unregularized version slightly better (very small difference). 
+
+
+
+
 
 
 
