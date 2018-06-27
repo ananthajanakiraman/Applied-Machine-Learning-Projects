@@ -41,3 +41,7 @@ Then, I produced a table showing, for each topic, the 10 words with the highest 
 **Initial Pi value vs Maximized Pi value ~ 1.0**
 
 <img src="tab3.png">
+
+**Image Segmentation using EM**
+
+can segment an image using a clustering method - each segment is the cluster center to which a pixel belongs. In this exercise, you will represent an image pixel by its r, g, and b values (so use color images!). Use the EM algorithm applied to the mixture of normal distribution model lectured in class to cluster image pixels, then segment the image by mapping each pixel to the cluster center with the highest value of the posterior probability for that pixel. You must implement the EM algorithm yourself (rather than using a package). Test images are here, and you should display results for all three of them
