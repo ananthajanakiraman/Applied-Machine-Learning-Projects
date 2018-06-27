@@ -59,3 +59,34 @@ I segmented each of the images to 10, 20, and 50 segments. I displayed these seg
 **50 Segments (154 iterations)**
 
 <img src="Problem2_Part1_50segment.png"> 
+
+I also tried to run image segmentation (Mixture of Normals) on the smallsunset.jpg image and segmented it 20 segments using 6 or more different starting points or initializations. I can with reasonable confidence say that I observed some variations in the final image after convergence on each execution with a different starting point and also the number of iterations to converge on each starting point were different in some cases the swing was large.
+
+Below are the results of the segmentation with different starting points. I have also included a table that shows the number iterations before convergence for each execution.
+
+**Table**
+<img src="tab1.png">
+
+**Execution-1**
+
+<img src="Problem2_Part2_1_1.png">
+
+**Execution-2**
+
+<img src="Problem2_Part2_1_2.png">
+
+**Execution-3**
+
+<img src="Problem2_Part2_1_3.png">
+
+**Execution-4**
+
+<img src="Problem2_Part2_1_4.png">
+
+**Execution-5**
+
+<img src="Problem2_Part2_1_5.png">
+
+**Execution-6**
+
+<img src="Problem2_Part2_1_6.png">
