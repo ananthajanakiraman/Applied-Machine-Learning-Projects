@@ -44,4 +44,18 @@ Then, I produced a table showing, for each topic, the 10 words with the highest 
 
 **Image Segmentation using EM**
 
-can segment an image using a clustering method - each segment is the cluster center to which a pixel belongs. In this exercise, you will represent an image pixel by its r, g, and b values (so use color images!). Use the EM algorithm applied to the mixture of normal distribution model lectured in class to cluster image pixels, then segment the image by mapping each pixel to the cluster center with the highest value of the posterior probability for that pixel. You must implement the EM algorithm yourself (rather than using a package). Test images are here, and you should display results for all three of them
+I segmented tbe chosen image image using the KMeans clustering method - each segment is the cluster center to which a pixel belongs. I chose a color image which has its pixels represented by r, g, and b values. I then used the EM algorithm applied to the mixture of normal distribution model to cluster image pixels, then segment the image by mapping each pixel to the cluster center with the highest value of the posterior probability for that pixel. I implemented the EM algorithm myself (rather than using a package).
+
+I segmented each of the images to 10, 20, and 50 segments. I displayed these segmented images as images, where each pixel's color is replaced with the mean color of the closest segment. Below are the segmented images after running the EM algorithm for the different segments (10, 20, 50) respectively. 
+
+**10 Segments (37 iterations)**
+
+<img src="Problem2_Part1_10segment.png">
+
+**20 Segments (132 iterations)**
+
+<img src="Problem2_Part1_20segment.png">
+
+**50 Segments (154 iterations)**
+
+<img src="Problem2_Part1_50segment.png"> 
