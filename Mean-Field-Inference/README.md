@@ -40,19 +40,19 @@ I denoised each image using a Boltzmann machine model and mean field inference. 
 
 First, I computed the variational free energy as given in the following.
 
-<img src="img2.png">
+<img src="ener1.png">
 
 A model independence assumption was made about the distribution.
 
-<img src="img3.png">
+<img src="ener2.png">
 
 Based on the independence assumption, the entropy term can be calculated as below
 
-<img src="img4.png">
+<img src="ener3.png">
 
 In order to avoid any computational complications in cases where I needed to compute 0 × log 0, I have added a very tiny value of Eps. = 10−10 insider the log. Based on the simplified log-likelihood term, I computed the entropy as below.
 
-<img src="img5.png">
+<img src="ener4.png">
 
 Since the K value is intractable to compute and has no effect on the optimization process of mean field approximation, I ignored it by setting K = 0. I then computed the EQ energy, and evaluated it both initially and after each iteration of updating the Q matrix. The final energy matrix can be found in energy_s1.csv where each row corresponds to the image, each column the iteration and the value represents the variational free energy of the Boltzman Machine used for the mth image  after the nth iteration of mean field inference.
 
