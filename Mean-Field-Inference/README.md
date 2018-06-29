@@ -56,5 +56,13 @@ In order to avoid any computational complications in cases where I needed to com
 
 Since the K value is intractable to compute and has no effect on the optimization process of mean field approximation, I ignored it by setting K = 0. I then computed the EQ energy, and evaluated it both initially and after each iteration of updating the Q matrix. The final energy matrix can be found in energy_s1.csv where each row corresponds to the image, each column the iteration and the value represents the variational free energy of the Boltzman Machine used for the mth image  after the nth iteration of mean field inference.
 
+**5. Displaying the reconstructed images**
 
+I ran the mean-field approximation method for exactly 10 iterations (i.e. going over and updating the hidden distribution of each pixel for exactly 100 times) on the images indexed 0 through 19. After that, based on the approximated Q distribution, I computed the MAP image, and stored it in a binary {0, 1} matrix format. I have the prediction matrix with a shape of 28 rows, and 280 columns as defined in the following.
+
+<img src="ener5.png">
+
+I have attached the denoised image matrix for images 10 through 19 in the project repository named as denoised_10_to_19.csv and 0 through 9 as denoised_0_to_9.csv. I have provided the sample denoised images for the first ten images below. 
+
+<img src="img2.png">
 
