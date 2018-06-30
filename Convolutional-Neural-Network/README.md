@@ -210,3 +210,4 @@ Test Accuaracy after 50K steps using the baseline model  - 0.8525
 <img src="CIFAR10_baseline_2.png">
 
 
+
