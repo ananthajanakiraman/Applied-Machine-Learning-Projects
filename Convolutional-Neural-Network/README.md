@@ -101,3 +101,23 @@ Once training is complete, I wanted to evaluate the model to determine its accur
 
 <img src="MNIST_baseline_4.png">
 
+**MNIST Improved Model (Type 1)**
+
+I made the following improvements to the baseline model discussed in the previous section.
+
+1.	Changed the optimizer to AdamOptimizer from GradientDescentOptimizer
+2.	Retained the keep_prob as 0.6 for the training set.
+3.	I used the same convolution and pooling layers, kernel size and strides from the baseline model.
+4.	Used the same batch size of 100 and displayed train and test accuracy values every 10 steps.
+
+Steps
+Training Accuracy(smoothed)
+Test Accuracy(smoothed)
+2K steps 
+0.9981
+0.9883
+20K steps
+0.9960
+0.9920
+
+
