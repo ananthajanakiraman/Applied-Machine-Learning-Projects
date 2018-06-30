@@ -130,3 +130,30 @@ Test Accuracy after 20K Steps -	0.9920
 <img src="MNIST_improved_1_4.png">
 
 
+**MNIST Improved Model (Type 2)**
+
+I made the following improvements to the baseline model discussed in the previous section.
+
+1.	Changed the optimizer to AdamOptimizer from GradientDescentOptimizer
+2.	Changed the keep_prob from 0.6 to 0.9.
+3.	I used the same convolution and pooling layers, kernel size and strides from the baseline model.
+4.	Used the same batch size of 100 and displayed train and test accuracy values every 10 steps.
+
+Test Accuracy after 2K Steps	- 0.9931
+Test Accuracy after 20K Steps -	0.9958
+
+**MNIST Improved Accuracy at 2K steps**
+
+<img src="MNIST_improved_2_1.png">
+
+**MNIST Improved Accuracy at 20K steps**
+
+<img src="MNIST_improved_2_2.png">
+
+**MNIST Improved Cross Entropy at 2K steps**
+
+<img src="MNIST_improved_2_3.png">
+
+**MNIST Improved Cross Entropy at 20K steps**
+
+<img src="MNIST_improved_2_4.png">
