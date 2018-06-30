@@ -62,3 +62,19 @@ The create each of the three layer types described above I used the following fu
 + max_pooling2d(). Constructs a two-dimensional pooling layer using the max-pooling algorithm. Takes pooling filter size and stride as arguments.
 + dense(). Constructs a dense layer. Takes number of neurons and activation function as arguments.
 Each of these methods accepts a tensor as input and returns a transformed tensor as output. This makes it easy to connect one layer to another: just take the output from one layer-creation method and supply it as input to another.
+
+**Training and Evaluating the CNN MNIST Classifier**
+
+**Load Training and Test Data**
+
+I stored the training feature data (the raw pixel values for 55,000 images of hand-drawn digits) and training labels (the corresponding value from 0–9 for each image) as numpy arrays in train_data and train_labels, respectively. Similarly, I stored the evaluation feature data (10,000 images) and evaluation labels in eval_data and eval_labels, respectively.
+
+**Create the Estimator**
+
+Next, I created an Estimator (a TensorFlow class for performing high-level model training, evaluation, and inference) for the model. The model_fn argument specifies the model function to use for training, evaluation, and prediction; I passed it the cnn_model_fn that was created in "Building the CNN MNIST Classifier." The model_dir argument specifies the directory where model data (checkpoints) will be saved.
+
+**Set Up a Logging Hook**
+
+Since CNNs can take a while to train, I set up some logging so we can track progress during training. I used TensorFlow's tf.train.SessionRunHook to create a tf.train.LoggingTensorHook that will log the probability values from the softmax layer of the CNN. I stored a dict of the tensors I wanted to log in tensors_to_log. Each key is a label of our choice that will be printed in the log output, and the corresponding label is the name of a Tensor in the TensorFlow graph. Here, the probabilities can be found in softmax_tensor, the name I gave the softmax operation earlier when we generated the probabilities in cnn_model_fn.
+
+Next, I created the LoggingTensorHook, passing tensors_to_log to the tensors argument. I set every_n_iter=50, which specifies that probabilities should be logged after every 50 steps of training.
