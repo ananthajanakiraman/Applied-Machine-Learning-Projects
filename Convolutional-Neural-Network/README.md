@@ -47,17 +47,18 @@ Typically, a CNN is composed of a stack of convolutional modules that perform fe
 
 **Building the CNN MNIST Classifier**
 
-Let's build a model to classify the images in the MNIST dataset using the following CNN architecture:
+I built a model to classify the images in the MNIST dataset using the following CNN architecture:
 
-Convolutional Layer #1: Applies 32 5x5 filters (extracting 5x5-pixel subregions), with ReLU activation function
-Pooling Layer #1: Performs max pooling with a 2x2 filter and stride of 2 (which specifies that pooled regions do not overlap)
-Convolutional Layer #2: Applies 64 5x5 filters, with ReLU activation function
-Pooling Layer #2: Again, performs max pooling with a 2x2 filter and stride of 2
-Dense Layer #1: 1,024 neurons, with dropout regularization rate of 0.4 (probability of 0.4 that any given element will be dropped during training)
-Dense Layer #2 (Logits Layer): 10 neurons, one for each digit target class (0–9).
-The tf.layers module contains methods to create each of the three layer types above:
+1. Convolutional Layer #1: Applies 32 5x5 filters (extracting 5x5-pixel subregions), with ReLU activation function
+2. Pooling Layer #1: Performs max pooling with a 2x2 filter and stride of 2 (which specifies that pooled regions do not overlap)
+3. Convolutional Layer #2: Applies 64 5x5 filters, with ReLU activation function
+4. Pooling Layer #2: Again, performs max pooling with a 2x2 filter and stride of 2
+5. Dense Layer #1: 1,024 neurons, with dropout regularization rate of 0.4 (probability of 0.4 that any given element will be dropped during training)
+6. Dense Layer #2 (Logits Layer): 10 neurons, one for each digit target class (0–9).
 
-conv2d(). Constructs a two-dimensional convolutional layer. Takes number of filters, filter kernel size, padding, and activation function as arguments.
-max_pooling2d(). Constructs a two-dimensional pooling layer using the max-pooling algorithm. Takes pooling filter size and stride as arguments.
-dense(). Constructs a dense layer. Takes number of neurons and activation function as arguments.
+The create each of the three layer types described above I used the following functions in tensorflow.
+
++ conv2d(). Constructs a two-dimensional convolutional layer. Takes number of filters, filter kernel size, padding, and activation function as arguments.
++ max_pooling2d(). Constructs a two-dimensional pooling layer using the max-pooling algorithm. Takes pooling filter size and stride as arguments.
++ dense(). Constructs a dense layer. Takes number of neurons and activation function as arguments.
 Each of these methods accepts a tensor as input and returns a transformed tensor as output. This makes it easy to connect one layer to another: just take the output from one layer-creation method and supply it as input to another.
