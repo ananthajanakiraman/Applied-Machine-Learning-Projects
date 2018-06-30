@@ -85,4 +85,19 @@ Next I trained the model, which I did by creating train_input_fn and calling tra
 
 Once training is complete, I wanted to evaluate the model to determine its accuracy on the MNIST test set. The basic model came up with a test accuracy of 0.9442 after 2k steps and 0.9771 after 20k steps.
 
+**MNIST Baseline Accuracy at 2K steps**
+
+<img src="MNIST_baseline_1.png">
+
+**MNIST Baseline Accuracy at 20K steps**
+
+<img src="MNIST_baseline_2.png">
+
+**MNIST Baseline Cross Entropy at 2K steps**
+
+<img src="MNIST_baseline_3.png">
+
+**MNIST Baseline Cross Entropy at 20K steps**
+
+<img src="MNIST_baseline_4.png">
 
