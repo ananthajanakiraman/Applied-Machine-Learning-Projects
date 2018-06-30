@@ -173,3 +173,40 @@ I built a model to classify the images in the CIFAR-10 dataset using the followi
 |local3	       |  fully connected layer with rectified linear activation.  |
 |local4	       |  fully connected layer with rectified linear activation.  |
 |softmax_linear|	 linear transformation to produce logits.                 |
+
+**Checkpoint for Evaluation**
+
+1.	I introduced a CheckPointSaver hook in cifar10_train.py that saves checkpoint files every 100 steps with max_to_keep parameter of the Saver object set to 500 because I wanted to save checkpoint files every 100 steps for a total of 50K steps (500 * 100 = 50K).
+2.	In cifar10_eval.py, I retrieved all of the checkpoint paths using all_model_checkpoint_paths (500 checkpoint paths) and loop through them. I evaluated test accuracy during each loop instance which represents a checkpoint path for every 100 steps.
+3. I updated the max number of steps to 50K and used a batch size of 128. 
+
+**Model Training**
+
+The usual method for training a network to perform N-way classification is multinomial logistic regression, aka. softmax regression. Softmax regression applies a softmax nonlinearity to the output of the network and calculates the cross-entropy between the normalized predictions and the label index. For regularization, we also apply the usual weight decay losses to all learned variables. The objective function for the model is the sum of the cross entropy loss and all these weight decay terms, as returned by the loss() function. I visualized it in TensorBoard with a tf.summary.scalar.
+
+I trained the model using standard gradient descent algorithm with a learning rate that exponentially decays over time. The train() function adds the operations needed to minimize the objective by calculating the gradient and updating the learned variables. It returns an operation that executes all the calculations needed to train and update the model for one batch of images.
+
+I ran python cifar10_train.py to train the model.
+
+**Evaluating the Model**
+
+I then evaluate how well the trained model performed on a hold-out data set. The model is evaluated by the script cifar10_eval.py. It constructs the model with the inference() function and uses all 10,000 images in the evaluation set of CIFAR-10. It calculates the precision at 1: how often the top prediction matches the true label of the image.
+
+To monitor how the model improves during training, the evaluation script runs periodically on the latest checkpoint files created by the cifar10_train.py.
+
+To run evaluation: python cifar10_eval.py
+
+**Baseline CIFAR-10 Performance**
+
+Test Accuaracy after 2K steps using the baseline model   - 0.6902
+Test Accuaracy after 50K steps using the baseline model  - 0.8525
+
+**CIFAR-10 Baseline Accuracy at 2K steps**
+
+<img src="CIFAR10_baseline_1.png">
+
+**CIFAR-10 Baseline Accuracy at 50K steps**
+
+<img src="CIFAR10_baseline_2.png">
+
+
