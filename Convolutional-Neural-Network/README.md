@@ -162,14 +162,14 @@ Test Accuracy after 20K Steps -	0.9958
 
 I built a model to classify the images in the CIFAR-10 dataset using the following CNN architecture:
 
-|Layer Name	   |    Description                                             |
- -------------: :---------------------------------------------------------: |
-|conv1	       |      convolution and rectified linear activation.          |
-|pool1	       |      max pooling.                                          |
-|norm1	       |      local response normalization.                         |
-|conv2	       |      convolution and rectified linear activation.          |
-|norm2	       |      local response normalization.                         |
-|pool2	       |      max pooling.                                          |
-|local3	       |      fully connected layer with rectified linear activation.|
-|local4	       |      fully connected layer with rectified linear activation.|
+|Layer Name	   |  Description                                              |
+|------------: | :------------------------------------------------------:  |
+|conv1	        |  convolution and rectified linear activation.             |
+|pool1	        |  max pooling.                                             |
+|norm1	        |  local response normalization.                            |
+|conv2	        |  convolution and rectified linear activation.             |
+|norm2	        |  local response normalization.                            |
+|pool2	        |  max pooling.                                             |
+|local3	       |  fully connected layer with rectified linear activation.  |
+|local4	       |  fully connected layer with rectified linear activation.  |
 |softmax_linear|	 linear transformation to produce logits.                 |
