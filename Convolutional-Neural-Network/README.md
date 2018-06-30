@@ -199,6 +199,7 @@ To run evaluation: python cifar10_eval.py
 **Baseline CIFAR-10 Performance**
 
 Test Accuaracy after 2K steps using the baseline model   - 0.6902
+
 Test Accuaracy after 50K steps using the baseline model  - 0.8525
 
 **CIFAR-10 Baseline Accuracy at 50K steps**
@@ -209,5 +210,24 @@ Test Accuaracy after 50K steps using the baseline model  - 0.8525
 
 <img src="CIFAR10_baseline_2.png">
 
+**CIFAR-10 Improved (Type-1)**
 
+I made the following changes to the network in the baseline model to improve the accuracy.
+
+1.	On the first convolution layer, changed the kernel size to (3,3) from (5,5).
+2.	Changed the output filters on the first convolution layer from 64 to 96 and the corresponding biases.
+3.	On the second convolution layer, changed the kernel size to (3,3) from (5,5).
+4.	The number of output filters in the second convolution layer is 64 and the input filters is 96.
+5.	Did not make any changes to the local response normalization parameters for any of the convolution layers.
+6.	The strides for max pooling layer-2 was updated from [1,2,2,1] to [1,1,1,1].
+7.	No changes were made to the fully connected layers, first max pooling layer and strides.
+8.	The changes made to cifar10_train.py and cifar10_eval.py were retained.
+
+**Improved(Type-1) CIFAR-10 Performance**
+
+Test Accuaracy after 2K steps using the baseline model   - 0.7003
+
+**CIFAR-10 Improved (Type-1) Accuracy at 2K steps**
+
+<img src="CIFAR10_improved_1">
 
