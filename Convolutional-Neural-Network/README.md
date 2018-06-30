@@ -110,14 +110,9 @@ I made the following improvements to the baseline model discussed in the previou
 3.	I used the same convolution and pooling layers, kernel size and strides from the baseline model.
 4.	Used the same batch size of 100 and displayed train and test accuracy values every 10 steps.
 
-Steps
-Training Accuracy(smoothed)
-Test Accuracy(smoothed)
-2K steps 
-0.9981
-0.9883
-20K steps
-0.9960
-0.9920
+Steps       Training Accuracy(smoothed)     Test Accuracy(smoothed)
+--------    ----------------------------    -------------------------
+2K steps    0.9981                          0.9883
+20K steps   0.9960                          0.9920
 
 
