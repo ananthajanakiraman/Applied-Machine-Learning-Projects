@@ -210,7 +210,7 @@ Test Accuaracy after 50K steps using the baseline model  - 0.8525
 
 <img src="CIFAR10_baseline_2.png">
 
-**CIFAR-10 Improved (Type-1)**
+**CIFAR-10 Improved (Type-1) Model**
 
 I made the following changes to the network in the baseline model to improve the accuracy.
 
@@ -230,4 +230,50 @@ Test Accuaracy after 2K steps using the baseline model   - 0.7003
 **CIFAR-10 Improved (Type-1) Accuracy at 2K steps**
 
 <img src="CIFAR10_improved_1.png">
+
+**CIFAR-10 Improved (Type-2) Model**
+
+I tried another model that uses Keras python library to train and test the CNN model. It also uses matplotlib to plot the accuracy graph (as seen below), batch normalization and uses a tensorflow backend. The model also employs data augmentation for improved accuracy.
+
+The model architecture is described below and network follows the same sequence as detailed below,
+1.	A convolution layer with 48 filters and kernel size (3, 3) that accepts an input with shape (3,32,32) and “same” border_mode so that the output image is of the same dimension as the input image.
+2.	A second convolution layer with 48 filters and kernel size (3, 3)
+3.	A max pooling layer with pool_size – (2,2)
+4.	Specified dropout rate of 0.25 from the prior layer to the next convolution layer.
+5.	A third convolution layer with 96 filters and kernel size (3, 3) with “same” border_mode.
+6.	A fourth convolution layer with 96 filters and kernel size (3, 3)
+7.	A second max pooling layer with pool_size – (2,2)
+8.	Specified dropout rate of 0.25 from the prior layer to the next convolution layer.
+9.	A fifth convolution layer with 192 filters and kernel size (3, 3) with “same” border_mode.
+10.	A sixth convolution layer with 192 filters and kernel size (3, 3)
+11.	A third max pooling layer with pool_size – (2,2)
+12.	Specified dropout rate of 0.25 from the prior layer to the next convolution layer.
+13.	Reshape and flatten the output from the prior layer.
+14.	The output is fed to a Densely connected layer with 512 units.
+15.	Specified dropout rate of 0.5 from the prior dense layer to the next densely connected layer
+16.	The output is fed to a Densely connected layer with 256 units.
+17.	Specified dropout rate of 0.5 from the prior dense layer to the next densely connected layer
+18.	The final densely connected layer is the output layer that uses softmax activation and 10 units one of each image class.
+19.	The model is compiled with categorical cross entropy as the loss function and optimized using Adam Optimizer.
+20. Training is performed for 7 epochs where each epoch consists of 390 steps and batch size of 128. The accuracy is captured at every 100 steps of each epoch. Below is the accuracy plot of Epoch vs Model Test Accuracy.
+
+**Improved(Type-2) CIFAR-10 Performance**
+
+Test Accuaracy after 2K steps using the baseline model   - 0.7225
+
+**CIFAR10 Improved-2 Accuracy after 2K steps (using Matplotlib)**
+
+<img src="cifar10_improved_plot.png">
+
+**Examples CIFAR-10 models referred to and executed for improving accuracy**
+
+1.	https://github.com/shiba24/cifar-10/blob/master/train_cnn_crop.py
+2.	https://github.com/chainer/chainer/tree/master/examples/cifar
+3.	https://github.com/wolfib/image-classification-CIFAR10-tf
+4.	https://github.com/bestkao/cifar-10
+5.	https://gist.github.com/kukuruza/6714b632c92d8967fd3c
+6.	https://github.com/Gurupradeep/CIFAR-10-Object-Recognition-in-Images
+7.	https://github.com/ashleyjsands/cifar-10-tensorflow
+8.	https://github.com/parneetk/Neural-Networks-in-Keras
+9.	https://github.com/eltonlaw/vgg-cifar10
 
