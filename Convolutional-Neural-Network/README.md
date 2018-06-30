@@ -75,6 +75,14 @@ Next, I created an Estimator (a TensorFlow class for performing high-level model
 
 **Set Up a Logging Hook**
 
-Since CNNs can take a while to train, I set up some logging so we can track progress during training. I used TensorFlow's tf.train.SessionRunHook to create a tf.train.LoggingTensorHook that will log the probability values from the softmax layer of the CNN. I stored a dict of the tensors I wanted to log in tensors_to_log. Each key is a label of our choice that will be printed in the log output, and the corresponding label is the name of a Tensor in the TensorFlow graph. Here, the probabilities can be found in softmax_tensor, the name I gave the softmax operation earlier when we generated the probabilities in cnn_model_fn.
+Since CNNs can take a while to train, I set up some logging so we can track progress during training. I used tf.Session() and Saver.save() function to save the checkpoint file every 100 epochs for a total of 20000 steps.
 
-Next, I created the LoggingTensorHook, passing tensors_to_log to the tensors argument. I set every_n_iter=50, which specifies that probabilities should be logged after every 50 steps of training.
+**Train the Model**
+
+Next I trained the model, which I did by creating train_input_fn and calling train() on mnist_classifier. In the numpy_input_fn call, we pass the training feature data and labels to x (as a dict) and y, respectively. We set a batch_size of 100 (which means that the model will train on minibatches of 100 examples at each step). num_epochs=None means that the model will train until the specified number of steps is reached. In the train call, we set steps=20000 (which means the model will train for 20,000 steps total). We save the checkpoint every 100 steps during training.
+
+**Evaluate the Model and Run the model**
+
+Once training is complete, I wanted to evaluate the model to determine its accuracy on the MNIST test set. The basic model came up with a test accuracy of 0.9442 after 2k steps and 0.9771 after 20k steps.
+
+
