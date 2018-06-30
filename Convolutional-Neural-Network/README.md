@@ -199,7 +199,6 @@ To run evaluation: python cifar10_eval.py
 **Baseline CIFAR-10 Performance**
 
 Test Accuaracy after 2K steps using the baseline model   - 0.6902
-
 Test Accuaracy after 50K steps using the baseline model  - 0.8525
 
 **CIFAR-10 Baseline Accuracy at 50K steps**
