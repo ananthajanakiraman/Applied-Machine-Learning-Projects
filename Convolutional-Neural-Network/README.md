@@ -229,5 +229,5 @@ Test Accuaracy after 2K steps using the baseline model   - 0.7003
 
 **CIFAR-10 Improved (Type-1) Accuracy at 2K steps**
 
-<img src="CIFAR10_improved_1">
+<img src="CIFAR10_improved_1.png">
 
