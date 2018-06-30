@@ -162,9 +162,13 @@ Test Accuracy after 20K Steps -	0.9958
 
 I built a model to classify the images in the CIFAR-10 dataset using the following CNN architecture:
 
-1. Convolutional Layer #1: Applies 64 5x5 filters (extracting 5x5-pixel subregions), with ReLU activation function
-2. Pooling Layer #1: Performs max pooling with a 3x3 filter and stride of 2 (which specifies that pooled regions do not overlap)
-3. Convolutional Layer #2: Applies 64 5x5 filters, with ReLU activation function
-4. Pooling Layer #2: Again, performs max pooling with a 3x3 filter and stride of 2
-5. Dense Layer #1: 1,024 neurons, with dropout regularization rate of 0.4 (probability of 0.4 that any given element will be dropped during training)
-6. Dense Layer #2 (Logits Layer): 10 neurons, one for each digit target class (0–9).
+|Layer Name	|    Description                                              |
+|conv1	    |      convolution and rectified linear activation.|
+|pool1	    |      max pooling.|
+|norm1	    |      local response normalization.|
+|conv2	    |      convolution and rectified linear activation.|
+|norm2	    |      local response normalization.|
+|pool2	    |      max pooling.|
+|local3	    |      fully connected layer with rectified linear activation.|
+|local4	    |      fully connected layer with rectified linear activation.|
+|softmax_linear|	 linear transformation to produce logits.|
