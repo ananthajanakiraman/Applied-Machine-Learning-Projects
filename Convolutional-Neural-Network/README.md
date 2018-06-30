@@ -45,7 +45,7 @@ Dense (fully connected) layers, which perform classification on the features ext
 
 Typically, a CNN is composed of a stack of convolutional modules that perform feature extraction. Each module consists of a convolutional layer followed by a pooling layer. The last convolutional module is followed by one or more dense layers that perform classification. The final dense layer in a CNN contains a single node for each target class in the model (all the possible classes the model may predict), with a softmax activation function to generate a value between 0–1 for each node (the sum of all these softmax values is equal to 1). We can interpret the softmax values for a given image as relative measurements of how likely it is that the image falls into each target class.
 
-**Building the CNN MNIST Classifier**
+**Building the CNN MNIST Classifier Model**
 
 I built a model to classify the images in the MNIST dataset using the following CNN architecture:
 
@@ -157,3 +157,14 @@ Test Accuracy after 20K Steps -	0.9958
 **MNIST Improved Cross Entropy at 20K steps**
 
 <img src="MNIST_improved_2_4.png">
+
+**CIFAR-10 Model**
+
+I built a model to classify the images in the CIFAR-10 dataset using the following CNN architecture:
+
+1. Convolutional Layer #1: Applies 64 5x5 filters (extracting 5x5-pixel subregions), with ReLU activation function
+2. Pooling Layer #1: Performs max pooling with a 3x3 filter and stride of 2 (which specifies that pooled regions do not overlap)
+3. Convolutional Layer #2: Applies 64 5x5 filters, with ReLU activation function
+4. Pooling Layer #2: Again, performs max pooling with a 3x3 filter and stride of 2
+5. Dense Layer #1: 1,024 neurons, with dropout regularization rate of 0.4 (probability of 0.4 that any given element will be dropped during training)
+6. Dense Layer #2 (Logits Layer): 10 neurons, one for each digit target class (0–9).
