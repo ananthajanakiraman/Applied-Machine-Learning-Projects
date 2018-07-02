@@ -36,13 +36,13 @@ Then I computed the distances between mean images for each pair of classes using
 
 **Euclidean Distance Matrix**
 
-<img src="dist1.png">
+<img src="Images-and-plots/dist1.png">
 
 **2D Plot using PCA - Euclidean distance measure**
-<img src="Plot_Part2.png">
+<img src="Images-and-plots/Plot_Part2.png">
 
 **Network Graph**
-<img src="net1.png">
+<img src="Images-and-plots/net1.png">
 
 Then I tried another measure of the similarity of two image classes. For image class A and image class B, I computed E(A | B) to be the average error obtained by representing all the images of class A using the mean of class A and the first 20 principal components of class B. I then computed the similarity between classes to be (1/2)(E(A | B) + E(B | A)). If A and B were very similar, then this error would be small, because A's principal components should be good at representing B. But if they were very different, then A's principal components should represent B poorly. In turn, the similarity measure would be big. Using principal coordinate analysis I made a 2D map of the classes as seen below.
 
@@ -50,10 +50,10 @@ The plot generated using Euclidean distance measure and the special similarity m
 
 **Special Similarity Distance Matrix**
 
-<img src="dist2.png">
+<img src="Images-and-plots/dist2.png">
 
 **2D Plot using PCA - Special similarity measure**
-<img src="Plot_Part3.png">
+<img src="Images-and-plots/Plot_Part3.png">
 
 **Network Graph**
-<img src="net2.png">
+<img src="Images-and-plots/net2.png">
