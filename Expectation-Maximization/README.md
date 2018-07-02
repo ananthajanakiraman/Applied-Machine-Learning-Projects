@@ -28,19 +28,19 @@ Using the NIPS dataset, I implemented the multinomial mixture of topics model. F
 Below is the graph I produced showing, for each topic, the probability with which the topic is selected.
 
 **Topic Model using EM (Random initialization)**
-<img src="Plot_Random_Initialization.png">
+<img src="Images-and-plots/Plot_Random_Initialization.png">
 
 **Topic Model using EM (KMeans initialization)**
-<img src="Plot_KMeans_Initialization.png">
+<img src="Images-and-plots/Plot_KMeans_Initialization.png">
 
 Then, I produced a table showing, for each topic, the 10 words with the highest probability for that topic.
-<img src="tab1.png">
+<img src="Images-and-plots/tab1.png">
 
-<img src="tab1.png">
+<img src="Images-and-plots/tab1.png">
 
 **Initial Pi value vs Maximized Pi value ~ 1.0**
 
-<img src="tab3.png">
+<img src="Images-and-plots/tab3.png">
 
 **Image Segmentation using EM**
 
@@ -50,43 +50,43 @@ I segmented each of the images to 10, 20, and 50 segments. I displayed these seg
 
 **10 Segments (37 iterations)**
 
-<img src="Problem2_Part1_10segment.png">
+<img src="Images-and-plots/Problem2_Part1_10segment.png">
 
 **20 Segments (132 iterations)**
 
-<img src="Problem2_Part1_20segment.png">
+<img src="Images-and-plots/Problem2_Part1_20segment.png">
 
 **50 Segments (154 iterations)**
 
-<img src="Problem2_Part1_50segment.png"> 
+<img src="Images-and-plots/Problem2_Part1_50segment.png"> 
 
 I also tried to run image segmentation (Mixture of Normals) on the smallsunset.jpg image and segmented it 20 segments using 6 or more different starting points or initializations. I can with reasonable confidence say that I observed some variations in the final image after convergence on each execution with a different starting point and also the number of iterations to converge on each starting point were different in some cases the swing was large.
 
 Below are the results of the segmentation with different starting points. I have also included a table that shows the number iterations before convergence for each execution.
 
 **Table**
-<img src="tab4.png">
+<img src="Images-and-plots/tab4.png">
 
 **Execution-1**
 
-<img src="Problem2_Part2_1_1.png">
+<img src="Images-and-plots/Problem2_Part2_1_1.png">
 
 **Execution-2**
 
-<img src="Problem2_Part2_1_2.png">
+<img src="Images-and-plots/Problem2_Part2_1_2.png">
 
 **Execution-3**
 
-<img src="Problem2_Part2_1_3.png">
+<img src="Images-and-plots/Problem2_Part2_1_3.png">
 
 **Execution-4**
 
-<img src="Problem2_Part2_1_4.png">
+<img src="Images-and-plots/Problem2_Part2_1_4.png">
 
 **Execution-5**
 
-<img src="Problem2_Part2_1_5.png">
+<img src="Images-and-plots/Problem2_Part2_1_5.png">
 
 **Execution-6**
 
-<img src="Problem2_Part2_1_6.png">
+<img src="Images-and-plots/Problem2_Part2_1_6.png">
