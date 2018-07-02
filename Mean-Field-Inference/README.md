@@ -6,7 +6,7 @@ methodology was utilized. This exploration will incorporate Mean field inference
 You can find the dataset at http://yann.lecun.com/exdb/mnist/ together with a collection of statistics on
 recognition, etc.
 
-<img src="img1.png">
+<img src="Images-and-plots/img1.png">
 
 **Setting up the Boltzmann Machine**
 
@@ -20,7 +20,7 @@ For each image, I obtained a noisy version by flipping some of the pixels. The e
 
 **Sample from the NoiseCoordinates file**
 
-<img src="tab1.png">
+<img src="Images-and-plots/tab1.png">
 
 **3. Building a Boltzman Machine for denoising the images and using Mean-Field Inference**
 
@@ -29,7 +29,7 @@ I denoised each image using a Boltzmann machine model and mean field inference. 
 • I followed a certain order which can be found in the file UpdateOrderCoordinates.csv to update each image is given in the
   supplementary file UpdateOrderCoordinates.csv
   
-<img src="tab2.png">
+<img src="Images-and-plots/tab2.png">
 
 • The initial parameters that I used for the model can be found in the supplementary file named as InitalParametersModel.csv.   This file is the initial matrix Q stored as comma-separated values, with a dimension of 28 × 28. Each entry of the matrix     falls in the [0, 1] interval, and the Qr,c  entry denotes the qr,c[Hr,c = 1] initial probability. I used the same initial
   parameters for all the Boltzman machines built for each image.
@@ -40,19 +40,19 @@ I denoised each image using a Boltzmann machine model and mean field inference. 
 
 First, I computed the variational free energy as given in the following.
 
-<img src="ener1.png">
+<img src="Images-and-plots/ener1.png">
 
 A model independence assumption was made about the distribution.
 
-<img src="ener2.png">
+<img src="Images-and-plots/ener2.png">
 
 Based on the independence assumption, the entropy term can be calculated as below
 
-<img src="ener3.png">
+<img src="Images-and-plots/ener3.png">
 
 In order to avoid any computational complications in cases where I needed to compute 0 × log 0, I have added a very tiny value of Eps. = 10−10 insider the log. Based on the simplified log-likelihood term, I computed the entropy as below.
 
-<img src="ener4.png">
+<img src="Images-and-plots/ener4.png">
 
 Since the K value is intractable to compute and has no effect on the optimization process of mean field approximation, I ignored it by setting K = 0. I then computed the EQ energy, and evaluated it both initially and after each iteration of updating the Q matrix. The final energy matrix can be found in energy_s1.csv where each row corresponds to the image, each column the iteration and the value represents the variational free energy of the Boltzman Machine used for the mth image  after the nth iteration of mean field inference.
 
@@ -60,9 +60,9 @@ Since the K value is intractable to compute and has no effect on the optimizatio
 
 I ran the mean-field approximation method for exactly 10 iterations (i.e. going over and updating the hidden distribution of each pixel for exactly 100 times) on the images indexed 0 through 19. After that, based on the approximated Q distribution, I computed the MAP image, and stored it in a binary {0, 1} matrix format. I have the prediction matrix with a shape of 28 rows, and 280 columns as defined in the following.
 
-<img src="ener5.png">
+<img src="Images-and-plots/ener5.png">
 
 I have attached the denoised image matrix for images 10 through 19 in the project repository named as denoised_10_to_19.csv and 0 through 9 as denoised_0_to_9.csv. I have provided the sample denoised images for the first ten images below. 
 
-<img src="img2.png">
+<img src="Images-and-plots/img2.png">
 
