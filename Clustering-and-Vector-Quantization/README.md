@@ -23,13 +23,13 @@ One can always decide to stop clustering when there is a sufficiently small numb
 I used an agglomerative clusterer to cluster the data. I produced a dendrogram of this data for each of single link, complete link, and group average clustering. I labelled the countries on the axis. I made plots using R's hclust clustering function, and then turning the result into a phylogenetic tree and using a fan plot. I was able to see dendrograms that made sense and have interesting differences.
 
 **Average Link**
-<img src="Dendogram_average.png">
+<img src="Images-and-plots/Dendogram_average.png">
 
 **Complete Link**
-<img src="Dendogram_complete.png">
+<img src="Images-and-plots/Dendogram_complete.png">
 
 **Single Link**
-<img src="Dendogram_single.png">
+<img src="Images-and-plots/Dendogram_single.png">
 
 **K-Means Clustering**
 
@@ -38,19 +38,19 @@ K-means is a simple unsupervised machine learning algorithm that groups a datase
 **Elbow curve method**
 
 One method to validate the number of clusters is the elbow method. The idea of the elbow method is to run k-means clustering on the dataset for a range of values of k (say, k from 1 to 10 in the examples above), and for each value of k calculate the sum of squared errors (SSE). Then, plot a line chart of the SSE for each value of k. If the line chart looks like an arm, then the "elbow" on the arm is the value of k that is the best. The idea is that we want a small SSE, but that the SSE tends to decrease toward 0 as we increase k (the SSE is 0 when k is equal to the number of data points in the dataset, because then each data point is its own cluster, and there is no error between it and the center of its cluster). So our goal is to choose a small value of k that still has a low SSE, and the elbow usually represents where we start to have diminishing returns by increasing k. Based on this method the ideal number of clusters for our dataset seemed to be 3.
-<img src="elbow_curve.png">
+<img src="Images-and-plots/elbow_curve.png">
 **KMeans using Data - 3 Clusters (based on the elbow curve above)**
 *(4 clusters is optimal too but plotted with 3 clusters)*
-<img src="KMeans_Plot_1.png">
+<img src="Images-and-plots/KMeans_Plot_1.png">
 
 **Principal Component Analysis**
 
 PCA serves as a dimensionality reduction method on the features of our original dataset by projecting these features onto a lower dimension. I tried to reduce the number of columns (i.e features) in the original dataset down to 3 columns. I also used the measure of Explained Variance to motivate and inform our search on getting the right number of PCA projections. Below is the variance plot explaining the percentage variance on each of the principal component. The plot shows that the first 3 principal components explain more than 85% of variance on the data.
 
 **Variance Plot**
-<img src="princomp_variance_plot.png">
+<img src="Images-and-plots/princomp_variance_plot.png">
 **KMeans using PCA**
-<img src="KMeans_Plot_2.png"> 
+<img src="Images-and-plots/KMeans_Plot_2.png"> 
 
 **Vector Quantization**
 
@@ -67,62 +67,62 @@ Another useful way to check this representation is to compare the average within
 I obtained an accuracy of 72.02% with 32 segments and 480 clusters without any signal overlap and an accuracy of 71.428% with signal overlap. Below are the confusion matrices.
 
 **Length-32 Segment and 480 Clusters – No Overlap : Accuracy – 72.02%**
-<img src="mat1.png">
+<img src="Images-and-plots/mat1.png">
 
 **Length-32 Segment and 480 Clusters – With Overlap : Accuracy – 71.428%**
-<img src="mat2.png">
+<img src="Images-and-plots/mat2.png">
 
 **Improvement on Vector Quantization**
 
 **Length-16 Segment and 480 Clusters – No Overlap : Accuracy – 76.19%**
-<img src="mat3.png">
+<img src="Images-and-plots/mat3.png">
 
 **Length-16 Segment and 480 Clusters – With Overlap : Accuracy – 77.97%**
-<img src="mat4.png">
+<img src="Images-and-plots/mat4.png">
 
 **Histogram Plots on Training Data**
 
 **Brush Teeth Plot**
-<img src="brush_teeth_plot.png">
+<img src="Images-and-plots/brush_teeth_plot.png">
 
 **Climb Stairs Plot**
-<img src="climb_stairs_plot.png">
+<img src="Images-and-plots/climb_stairs_plot.png">
 
 **Comb Hair Plot**
-<img src="comb_hair_plot.png">
+<img src="Images-and-plots/comb_hair_plot.png">
 
 **Descend Stairs Plot**
-<img src="descend_stairs_plot.png">
+<img src="Images-and-plots/descend_stairs_plot.png">
 
 **Drink Glass Plot**
-<img src="drink_glass_plot.png">
+<img src="Images-and-plots/drink_glass_plot.png">
 
 **Eat Meat Plot**
-<img src="eat_meat_plot.png">
+<img src="Images-and-plots/eat_meat_plot.png">
 
 **Eat Soup Plot**
-<img src="eat_soup_plot.png">
+<img src="Images-and-plots/eat_soup_plot.png">
 
 **Getup Bed Plot**
-<img src="getup_bed_plot.png">
+<img src="Images-and-plots/getup_bed_plot.png">
 
 **Liedown Bed Plot**
-<img src="liedown_bed_plot.png">
+<img src="Images-and-plots/liedown_bed_plot.png">
 
 **Pour Water Plot**
-<img src="pour_water_plot.png">
+<img src="Images-and-plots/pour_water_plot.png">
 
 **Sitdown Chair Plot**
-<img src="sitdown_chair_plot.png">
+<img src="Images-and-plots/sitdown_chair_plot.png">
 
 **Standup Chair Plot**
-<img src="standup_chair_plot.png">
+<img src="Images-and-plots/standup_chair_plot.png">
 
 **Use telephone Plot**
-<img src="use_telephone_plot.png">
+<img src="Images-and-plots/use_telephone_plot.png">
 
 **Walk Plot**
-<img src="walk_plot_1.png">
+<img src="Images-and-plots/walk_plot_1.png">
 
 **Walk Plot**
-<img src="walk_plot_2.png">
+<img src="Images-and-plots/walk_plot_2.png">
