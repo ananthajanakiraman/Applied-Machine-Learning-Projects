@@ -87,19 +87,19 @@ Once training is complete, I wanted to evaluate the model to determine its accur
 
 **MNIST Baseline Accuracy at 2K steps**
 
-<img src="MNIST_baseline_1.png">
+<img src="Images-and-plots/MNIST_baseline_1.png">
 
 **MNIST Baseline Accuracy at 20K steps**
 
-<img src="MNIST_baseline_2.png">
+<img src="Images-and-plots/MNIST_baseline_2.png">
 
 **MNIST Baseline Cross Entropy at 2K steps**
 
-<img src="MNIST_baseline_3.png">
+<img src="Images-and-plots/MNIST_baseline_3.png">
 
 **MNIST Baseline Cross Entropy at 20K steps**
 
-<img src="MNIST_baseline_4.png">
+<img src="Images-and-plots/MNIST_baseline_4.png">
 
 **MNIST Improved Model (Type 1)**
 
@@ -115,19 +115,19 @@ Test Accuracy after 20K Steps -	0.9920
 
 **MNIST Improved Accuracy at 2K steps**
 
-<img src="MNIST_improved_1_1.png">
+<img src="Images-and-plots/MNIST_improved_1_1.png">
 
 **MNIST Improved Accuracy at 20K steps**
 
-<img src="MNIST_improved_1_2.png">
+<img src="Images-and-plots/MNIST_improved_1_2.png">
 
 **MNIST Improved Cross Entropy at 2K steps**
 
-<img src="MNIST_improved_1_3.png">
+<img src="Images-and-plots/MNIST_improved_1_3.png">
 
 **MNIST Improved Cross Entropy at 20K steps**
 
-<img src="MNIST_improved_1_4.png">
+<img src="Images-and-plots/MNIST_improved_1_4.png">
 
 
 **MNIST Improved Model (Type 2)**
@@ -144,19 +144,19 @@ Test Accuracy after 20K Steps -	0.9958
 
 **MNIST Improved Accuracy at 2K steps**
 
-<img src="MNIST_improved_2_1.png">
+<img src="Images-and-plots/MNIST_improved_2_1.png">
 
 **MNIST Improved Accuracy at 20K steps**
 
-<img src="MNIST_improved_2_2.png">
+<img src="Images-and-plots/MNIST_improved_2_2.png">
 
 **MNIST Improved Cross Entropy at 2K steps**
 
-<img src="MNIST_improved_2_3.png">
+<img src="Images-and-plots/MNIST_improved_2_3.png">
 
 **MNIST Improved Cross Entropy at 20K steps**
 
-<img src="MNIST_improved_2_4.png">
+<img src="Images-and-plots/MNIST_improved_2_4.png">
 
 **CIFAR-10 Model**
 
@@ -204,11 +204,11 @@ Test Accuaracy after 50K steps using the baseline model  - 0.8525
 
 **CIFAR-10 Baseline Accuracy at 50K steps**
 
-<img src="CIFAR10_baseline_1.png">
+<img src="Images-and-plots/CIFAR10_baseline_1.png">
 
 **CIFAR-10 Baseline Accuracy at 2K steps**
 
-<img src="CIFAR10_baseline_2.png">
+<img src="Images-and-plots/CIFAR10_baseline_2.png">
 
 **CIFAR-10 Improved (Type-1) Model**
 
@@ -229,7 +229,7 @@ Test Accuaracy after 2K steps using the baseline model   - 0.7003
 
 **CIFAR-10 Improved (Type-1) Accuracy at 2K steps**
 
-<img src="CIFAR10_improved_1.png">
+<img src="Images-and-plots/CIFAR10_improved_1.png">
 
 **CIFAR-10 Improved (Type-2) Model**
 
@@ -263,7 +263,7 @@ Test Accuaracy after 2K steps using the baseline model   - 0.7225
 
 **CIFAR10 Improved-2 Accuracy after 2K steps (using Matplotlib)**
 
-<img src="cifar10_improved_plot.png">
+<img src="Images-and-plots/cifar10_improved_plot.png">
 
 **Examples CIFAR-10 models referred to and executed for improving accuracy**
 
