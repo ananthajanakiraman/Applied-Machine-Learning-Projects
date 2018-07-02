@@ -30,7 +30,7 @@ I cycled through the binary image files and imported the dataset into R datafram
 
 For each category, computed the mean image and the first 20 principal components. Plotted the error resulting from representing the images of each category using the first 20 principal components against the category. Below is the plot -
 
-<img src="Plot_Part1.png">
+<img src="Images-and-plots/Plot_Part1.png">
 
 Then I computed the distances between mean images for each pair of classes using a well known distance measure - Euclidean distance measure. I computed istances by thinking of the images as vectors and used principal coordinate analysis to make a 2D map of the means of each categories. Below is the 2D plot and computed distance matrix.
 
