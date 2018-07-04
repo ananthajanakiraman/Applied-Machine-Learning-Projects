@@ -223,7 +223,7 @@ I made the following changes to the network in the baseline model to improve the
 7.	No changes were made to the fully connected layers, first max pooling layer and strides.
 8.	The changes made to cifar10_train.py and cifar10_eval.py were retained.
 
-**Improved(Type-1) CIFAR-10 Performance**
+**CIFAR-10 Improved (Type-1) Performance**
 
 Test Accuaracy after 2K steps using the baseline model   - 0.7003
 
