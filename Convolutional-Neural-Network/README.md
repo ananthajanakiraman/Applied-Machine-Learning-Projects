@@ -257,7 +257,7 @@ The model architecture is described below and network follows the same sequence 
 19.	The model is compiled with categorical cross entropy as the loss function and optimized using Adam Optimizer.
 20. Training is performed for 7 epochs where each epoch consists of 390 steps and batch size of 128. The accuracy is captured at every 100 steps of each epoch. Below is the accuracy plot of Epoch vs Model Test Accuracy.
 
-**Improved(Type-2) CIFAR-10 Performance**
+**CIFAR-10 Improved (Type-2) Performance**
 
 Test Accuaracy after 2K steps using the baseline model   - 0.7225
 
