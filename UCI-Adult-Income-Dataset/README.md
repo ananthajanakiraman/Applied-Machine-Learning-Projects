@@ -9,7 +9,7 @@ I implemented and trained a support vector machine on the data using stochastic 
 Based on the implementation above I produced the following
 
 + Plot of the accuracy every 30 steps, for each value of the regularization constant.
-+ plot of the magnitude of the coefficient vector every 30 steps, for each value of the regularization constant.
++ Plot of the magnitude of the coefficient vector every 30 steps, for each value of the regularization constant.
 + Estimate of the best value of the regularization constant, together with a brief description of why you believe that is a good value.
 + Estimate of the accuracy of the best classifier on the 10% test dataset data
 
